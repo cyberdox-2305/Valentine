@@ -159,10 +159,19 @@
       width:min(90%,420px);
       max-height:55vh;
       object-fit:cover;
-      border-radius:30px;
+      border-radius:32px;
       margin-top:25px;
-      box-shadow:0 30px 60px rgba(0,0,0,.4);
-      animation:zoomIn 1s ease;
+      padding:6px;
+      background:linear-gradient(135deg,#ffffff55,#ffffff22);
+      backdrop-filter:blur(12px);
+      box-shadow:0 0 25px rgba(255,46,99,.6),
+                 0 30px 60px rgba(0,0,0,.4);
+      animation:zoomIn 1s ease, glow 2.5s infinite alternate;
+    }
+
+    @keyframes glow{
+      from{box-shadow:0 0 15px rgba(255,46,99,.4),0 30px 60px rgba(0,0,0,.35)}
+      to{box-shadow:0 0 45px rgba(255,46,99,.9),0 30px 60px rgba(0,0,0,.45)}
     }
 
     @keyframes zoomIn{
@@ -216,9 +225,9 @@
 
 <div id="celebration">
   <div class="ring">💍</div>
-  <h1>She Said YES! 🎉</h1>
-  <img src="photo.jpg" alt="Our Photo" />
-  <h1>Forever Starts Now ❤️</h1>
+  <h1>Congratulations! 🎉</h1>
+  <img src="image1.jpeg" alt="Our Photo" />
+  <h1>You are officially <br>Rajul's Wife <br>forever and always ❤️</h1>
 </div>
 
 <!-- background intro music -->
