@@ -177,3 +177,24 @@
     
 })(jQuery);
 
+
+function sendToWhatsApp() {
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var subject = document.getElementById("subject").value;
+    var message = document.getElementById("message").value;
+
+    var phoneNumber = "923215327235";
+
+    var whatsappMessage = 
+        "New Contact from Website:%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Email: " + email + "%0A" +
+        "Subject: " + subject + "%0A" +
+        "Message: " + message;
+
+    var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + whatsappMessage;
+
+    window.open(whatsappURL, '_blank');
+}
