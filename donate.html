@@ -256,8 +256,40 @@ background:rgba(0,0,0,0.7); z-index:9999;">
         <script src="mail/contact.js"></script>
 
         <!-- Template Javascript -->
+           <script>
+function openDonatePopup() {
+    document.getElementById("donatePopup").style.display = "block";
+}
+
+function closeDonatePopup() {
+    document.getElementById("donatePopup").style.display = "none";
+}
+
+function sendMTCNtoWhatsApp() {
+
+    var mtcn = document.getElementById("mtcn").value;
+
+    if(mtcn == "") {
+        alert("Please enter your MTCN number.");
+        return;
+    }
+
+    var phoneNumber = "923215327235";
+
+    var message = "New Western Union Donation:%0A%0A" +
+                  "MTCN: " + mtcn + "%0A" +
+                  "Receiver: Rajul Raj%0A" +
+                  "City: Faisalabad, Pakistan";
+
+    var url = "https://wa.me/" + phoneNumber + "?text=" + message;
+
+    window.open(url, "_blank");
+}
+</script>
+
         <script src="js/main.js"></script>
     </body>
 </html>
+
 
 
